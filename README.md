@@ -1,4 +1,4 @@
-# Customer service
+# Customer service web app
 
 ## Table of Contents
 - [Overview](#overview)
