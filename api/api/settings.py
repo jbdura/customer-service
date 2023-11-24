@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     # installed apps
     'rest_framework',
     'drf_spectacular',
+    'corsheaders',
 
     # created apps
     'accounts',
@@ -48,6 +49,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -137,3 +139,13 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.TokenAuthentication',  # Include this for token authentication
     ),
 }
+
+
+# CORS_ORIGIN_ALLOW_ALL = False
+
+# ALLOWED_HOSTS = ['*']  # Adjust as needed for production
+
+# This allows cors
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:3000',
+]
