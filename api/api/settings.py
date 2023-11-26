@@ -43,6 +43,9 @@ INSTALLED_APPS = [
     'rest_framework',
     'drf_spectacular',
     'corsheaders',
+    'pandas',
+    'openpyxl',
+    # 'django_faker',
 
     # created apps
     'accounts',
@@ -117,7 +120,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'Africa/Nairobi'
+TIME_ZONE = 'UTC'
 
 USE_I18N = False
 
@@ -147,9 +150,7 @@ REST_FRAMEWORK = {
     ),
 }
 
-# ALLOWED_HOSTS = ['*']  # Adjust as needed for production
+TIME_INPUT_FORMATS = ['%I:%M %p']
 
-# This allows cors
-# CORS_ALLOWED_ORIGINS = [
-#     'http://localhost:3000',
-# ]
+# FAKER_LOCALE = None     # settings.LANGUAGE_CODE is loaded
+# FAKER_PROVIDERS = None  # faker.DEFAULT_PROVIDERS is loaded (all)
