@@ -8,6 +8,20 @@ function Messages () {
   const [ messages, setMessages ] = useState( [] );
   const [ agents, setAgents ] = useState( [] );
   const [ selectedAgent, setSelectedAgent ] = useState( null );
+  const [ response, setResponse ] = useState( [] );
+
+
+  useEffect( () => {
+    fetch( ResponseURL )
+      .then( ( res ) => res.json() )
+      .then( ( data ) => {
+        console.log( data );
+
+        // Ensure data.results is an array before setting the state
+
+        setResponse( data );
+      } );
+  }, [] );
 
   useEffect( () => {
     fetch( MessageURL )
@@ -104,6 +118,26 @@ function Messages () {
               Submit Reply
             </button>
           </form>
+          {/* Display responses below the form */ }
+          <div className="mt-4">
+            <h4 className="text-lg font-semibold mb-2">Responses:</h4>
+            { response
+              .filter( ( response ) => response.message === message.id )
+              .map( ( filteredResponse ) => (
+                <div key={ filteredResponse.id } className="border-t mt-2 pt-2">
+                  <p className="mb-2">
+                    <strong>Agent:</strong> { filteredResponse.agent.name }
+                  </p>
+                  <p className="mb-2">
+                    <strong>Response:</strong> { filteredResponse.content }
+                  </p>
+                  <p className="mb-2">
+                    <strong>Message:</strong> { message.content }
+                  </p>
+                  <small>{ new Date( filteredResponse.timestamp ).toLocaleString() }</small>
+                </div>
+              ) ) }
+          </div>
         </div>
       ) ) }
     </div>
