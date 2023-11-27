@@ -1,6 +1,6 @@
 # API
 
-Welcome to the School API! This API is designed to manage various aspects of a school system, including students, courses, teachers, and more.
+This is the API for the customer service web app.
 
 # Getting Started
 
