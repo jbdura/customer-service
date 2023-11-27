@@ -18,7 +18,6 @@ urlpatterns += router.urls
 ########################################################################################################################
 
 
-# # messaging/urls.py
 # from django.urls import path
 # from .views import CustomerMessagesView, AnswerMessageView, MessageViewSet, ResponseViewSet
 # from rest_framework.routers import DefaultRouter
@@ -48,7 +47,6 @@ urlpatterns += router.urls
 #
 #
 #######################################################################################################################
-# # # messaging/urls.py
 # # from rest_framework import routers
 # # from .views import MessageViewSet, ResponseViewSet
 # #

@@ -37,7 +37,6 @@ class Command(BaseCommand):
 
         self.stdout.write(self.style.SUCCESS('Data imported successfully'))
 
-# # messaging/management/commands/import_messages.py
 # import pandas as pd
 # from django.core.management.base import BaseCommand
 # from accounts.models import Customer, Agent
@@ -77,7 +76,6 @@ class Command(BaseCommand):
 #
 
 
-# # messaging/management/commands/import_messages.py
 # import pandas as pd
 # from django.core.management.base import BaseCommand
 # from accounts.models import Customer, Agent

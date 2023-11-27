@@ -68,7 +68,6 @@ class ResponseViewSet(viewsets.ModelViewSet):
     permission_classes = [permissions.AllowAny]  # Allow any user, including unauthenticated users
     authentication_classes = []  # No authentication for this viewset
 
-# # messaging/views.py
 # from rest_framework.response import Response
 # from rest_framework.views import APIView
 # from rest_framework import viewsets
@@ -133,7 +132,6 @@ class ResponseViewSet(viewsets.ModelViewSet):
 #######################################################################################################################
 
 
-# # messaging/views.py
 # from rest_framework.response import Response
 # from rest_framework.views import APIView
 # from rest_framework import viewsets
