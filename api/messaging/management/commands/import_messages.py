@@ -1,4 +1,3 @@
-# messaging/management/commands/import_messages.py
 import pandas as pd
 from django.core.management.base import BaseCommand
 from accounts.models import Customer, Agent
